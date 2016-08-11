@@ -1,5 +1,7 @@
 # stortingOCR
+This is a work in progress with the goal of converting and structuring the non-digitalized post-war minutes from the Norwegian parliament (1945-2005). More specifically, I am processing images in pdf format with [ImageMagick](http://www.imagemagick.org/) to reduce noise and induce sharpness, and then use [Tesseract-OCR](https://github.com/tesseract-ocr) to optically read the text from the processed images.
 
+The pdfs are downloaded form the [Norwegian National Library](https://www.nb.no), whereas the image processing is mainly based on a problem solution by user *fmw42* on [imagemagic discussion forum](http://www.imagemagick.org/discourse-server/viewtopic.php?t=26571#p117130).
 
 ### Image converting
 
@@ -31,7 +33,7 @@
 
   ![final](./example/finalEx.png "The final quality")
 
-8. Run `tesseract` on the final image to get the result:
+8. Run `tesseract` on the final image to get the result ( Notice that the top of the "s" in Eidnes is cut off in the final image, but is still read as an "s" by tesseract):
 __________
 
 Eidnes: Ja, kvar Kringkastinga eigenleg
