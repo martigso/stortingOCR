@@ -32,8 +32,9 @@
   ![pdf](./example/final-0493.png "Pdf picture quality")
 
 8. Run `tesseract` on the final image to get the result:
-___
-1916. 12 mars. —— Anklager mot Luftforsvarets ledelse. 319
+_________
+
+1916\. 12 mars. —— Anklager mot Luftforsvarets ledelse. 319
 
 overkommando ble ledet på. For det femte
 var det anket over at ingeniørene ikke ble
