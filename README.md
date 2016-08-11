@@ -32,7 +32,7 @@
   ![pdf](./example/final-0493.png "Pdf picture quality")
 
 8. Run `tesseract` on the final image to get the result:
-_________
+__________
 
 1916\. 12 mars. —— Anklager mot Luftforsvarets ledelse. 319
 
