@@ -3,6 +3,11 @@ This is a work in progress with the goal of converting and structuring the non-d
 
 The pdfs are downloaded form the [Norwegian National Library](https://www.nb.no), whereas the image processing is mainly based on a problem solution by user *fmw42* on [imagemagic discussion forum](http://www.imagemagick.org/discourse-server/viewtopic.php?t=26571#p117130).
 
+### OS
+The project is built and maintained in Linux. However, future tests could be made on the new [Windows Subsystem for Linux](http://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/), and MacOS.
+
+Git, ImageMagick, and Tesseract-OCR needs to be installed in order for the scripts to run.
+
 ### Image converting
 
 1. Getting pdfs and splitting into single pages at the following quality:
