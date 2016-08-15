@@ -5,6 +5,9 @@ read year
 echo "Which letter of the year?"
 read letter
 
+echo "What level of LAT should be used on this pdf?"
+read lat
+
 rm tmp/*
 echo "Old files removed ..."
 
@@ -35,7 +38,7 @@ unsortLength=(`echo "${initiala[@]}" | grep -o "[0-9]*"`)
 
 echo "Doing LAT ..."
 for i in ${sortedLength[@]}; do
-	convert "${initiala[$i]}" -negate -lat 20x20+20% -negate "first-${unsortLength[$i]}.png"
+	convert "${initiala[$i]}" -negate -lat ${lat} -negate "first-${unsortLength[$i]}.png"
 done
 
 first_lat10=(`ls first*`)

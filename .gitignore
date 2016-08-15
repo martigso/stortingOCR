@@ -1,2 +1,4 @@
 tmp/*
 storting/s*
+.Rproj.user
+.Rhistory
