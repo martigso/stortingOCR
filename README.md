@@ -9,6 +9,7 @@ The project is built and maintained in Linux. However, future tests could be mad
 Git, ImageMagick, and Tesseract-OCR needs to be installed in order for the scripts to run.
 
 ### Image converting
+To do the converting from PDF through image to text, run `bash bash/universalNoiseReduction.sh` and follow the instructions given there. The script goes through the following steps:
 
 1. Getting pdfs and splitting into single pages at the following quality:
 
