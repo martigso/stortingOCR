@@ -5,21 +5,26 @@ read year
 echo "Which letter of the year?"
 read letter
 
-echo "What level of LAT should be used on this pdf? (e.g 10x10+10%)"
+echo "What level of LAT should be used on this pdf? (e.g 20x20+10%)"
 read lat
 
-rm tmp/*
+echo "Process number (1 if you only run 1)"
+read process
+
+rm -r tmp$process
+mkdir tmp$process
+
 echo "Old files removed ..."
 
 echo "Starting up with $year$letter..."
-pdftk "./storting/s$year/s$year$letter/s$year$letter.pdf" burst output ./tmp/pg_%0002d.pdf
+pdftk "./storting/s$year/s$year$letter/s$year$letter.pdf" burst output ./tmp$process/pg_%0002d.pdf
 echo "Pdfs split ..."
-rm ./tmp/doc_data.txt
 
-Rscript ./R/rename_files.R
+rm ./tmp$process/doc_data.txt
+
+cd ./tmp$process
+Rscript ../R/rename_files.R
 echo "Files renamed ..."
-
-cd ./tmp
 
 pdfPage="$(ls pg*.pdf)"
 pdfPage=(`echo "${pdfPage}" | grep -o "[0-9]*"`)
