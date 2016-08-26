@@ -15,4 +15,4 @@ rename_pdfs <- function(path, pattern){
 
 }
 
-rename_pdfs("./tmp/", pattern = ".pdf")
+rename_pdfs("./", pattern = ".pdf")
