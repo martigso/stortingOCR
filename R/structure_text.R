@@ -88,6 +88,9 @@ texts_collapse <- gsub("Brø rby", "Brørby", texts_collapse)
 texts_collapse <- gsub("Stråtv eit", "Stråtveit", texts_collapse)
 texts_collapse <- gsub("Folk» ord", "Folkvord",texts_collapse)
 texts_collapse <- gsub("\\(ordfører for saken\\)\\.", "(ordfører for saken):",texts_collapse)
+texts_collapse <- gsub("Schj ett", "Schjøtt",texts_collapse)
+texts_collapse <- gsub("J agland", "Jagland",texts_collapse)
+
 
 # Sloppy typewriting (not OCR's fault =))
 # texts_collapse <- gsub("Karl Eirik Schjøtt-Pedersen: Ja, det er", "Statsråd Karl Eirik Schjøtt-Pedersen: Ja, det er", texts_collapse)
