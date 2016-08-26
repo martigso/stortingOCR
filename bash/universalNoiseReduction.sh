@@ -5,7 +5,7 @@ read year
 echo "Which letter of the year?"
 read letter
 
-echo "What level of LAT should be used on this pdf?"
+echo "What level of LAT should be used on this pdf? (e.g 10x10+10%)"
 read lat
 
 rm tmp/*
