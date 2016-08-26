@@ -39,4 +39,14 @@ ocr_check <- ocr[, c("raw_name", "name", "digitalname", "speech", "digital")]
 #   fail[i] <- agrepl(ocr_check$name[i], ocr_check$digitalname[i], max.distance = 3)
 # }
 # ocr_check$fail <- fail
+ocr_text <- ocr_check[, c("speech", "name")]
+colnames(ocr_text) <- c("text", "name")
+digital_text <- ocr_check[, c("digital", "digitalname")]
+colnames(digital_text) <- c("text", "name")
+
+write.csv(ocr_text, "./ocr_check_files/ocr_text.csv", row.names = FALSE)
+write.csv(digital_text, "./ocr_check_files/digital_text.csv", row.names = FALSE)
+
+system("python ../python/ocr_eval.py --gold ./ocr_check_files/digital_text.csv --ocr ./ocr_check_files/ocr_text.csv")
+
 
