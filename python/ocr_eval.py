@@ -72,6 +72,10 @@ def main():
     print "Average ld:", sum(scores) / float(len(scores))
     print "Best:", best_i
     print "Worst:", worst_i
+    
+    ld_scores = open("ld_scores.csv", "wb")
+    wr = csv.writer(ld_scores, quoting=csv.QUOTE_ALL)
+    wr.writerow(scores)
 
 
 
