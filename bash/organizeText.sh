@@ -1,11 +1,14 @@
 #!/bin/bash
-cd ./tmp/
 
 # Setting up some initial variables
 echo "Which year is being organized?"
 read year
 echo "What letter of $year is being organized?"
 read letter
+echo "Process number the text to be organized was run under"
+read process
+
+cd ./tmp$process/
 
 # Removing or organization of pictures
 echo "Should pictures be removed or organized? (rm/org)"
@@ -100,4 +103,4 @@ mv ${textFiles[@]} ./text/
 
 cd ..
 
-mv tmp/* ./storting/s$year/s$year$letter/
+mv tmp$process/* ./storting/s$year/s$year$letter/

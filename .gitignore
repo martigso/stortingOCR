@@ -3,3 +3,5 @@ storting/s*
 .Rproj.user
 .Rhistory
 R/ocr_check_files/*.csv
+R/*.csv
+R/plots/*
